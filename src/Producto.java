@@ -38,4 +38,39 @@ public class Producto {
     public double getPrecio () {
         return precio;
     }
+
+    // metodo para actualizar producto
+    public void actualizarProducto(String nuevoNombre, String nuevaDescripcion, String nuevaCategoria, String nuevoCodigo, int nuevaCantidad, double nuevoPrecio){
+        if (nuevoNombre == null || nuevoNombre.trim().isEmpty()) {
+            System.out.println("El nombre no puede ir vacio, por favor ingresa uno");
+            return;
+        }
+        if (nuevaDescripcion == null || nuevaDescripcion.trim().isEmpty()){
+            System.out.println("La descripcion no puede estar vacia, por favor digita una bien chimbita");
+            return;
+        }
+        if (nuevaCategoria == null || nuevaCategoria.trim().isEmpty()){
+            System.out.println("La categoria no puede ir vacia, ingresa una");
+            return;
+        }
+        if (nuevoCodigo == null || nuevoCodigo.trim().isEmpty()){
+            System.out.println("El codigo es necesario, no puede ir vacio, ingresa uno");
+            return;
+        }
+        if (nuevaCantidad <= 0){
+            System.out.println("La cantidad es necesaria, no puede ser negativa, ingresa un valor valido");
+            return;
+        }
+        if (nuevoPrecio <= 0){
+            System.out.println("El precio debe de ser mayor a cero");
+            return;
+        }
+        this.nombre = nuevoNombre;
+        this.descripcion = nuevaDescripcion;
+        this.categoria = nuevaCategoria;
+        this.codigo = nuevoCodigo;
+        this.cantidad = nuevaCantidad;
+        this.precio = nuevoPrecio;
+
+    }
 }
