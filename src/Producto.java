@@ -18,5 +18,24 @@ public class Producto {
         this.precio = precio;
     }
 
+    //getter
 
+    public String getNombre() {
+        return nombre;
+    }
+    public String getDescripcion() {
+        return descripcion;
+    }
+    public String getCategoria () {
+        return categoria;
+    }
+    public String getCodigo() {
+        return codigo;
+    }
+    public int getCantidad () {
+        return cantidad;
+    }
+    public double getPrecio () {
+        return precio;
+    }
 }
