@@ -107,7 +107,7 @@ public class Producto {
 
         System.out.println("El descuento aplicado es:  " + descuento);
         System.out.println("El nuevo precio es:  " + this.precio);
-        scanner.close();
+        
 
     }
 
