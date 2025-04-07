@@ -73,4 +73,18 @@ public class Producto {
         this.precio = nuevoPrecio;
 
     }
+
+    // metodo to string
+
+    public String toString(){
+        return "*************************** \n" +
+                "Informacion del producto \n" +
+                "Nombre: " + nombre + "\n" +
+                "Descripcion: " + descripcion + "\n" +
+                "Categoria: " + categoria + "\n" +
+                "Codigo: " + codigo + "\n" +
+                "Cantidad: " + cantidad + "\n" +
+                "Precio: " + precio + "\n" +
+                "***************************";
+    }
 }

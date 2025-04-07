@@ -37,7 +37,7 @@ public class Cliente {
     }
 
     public String toString(){
-        return "------------------------------\n" +
+        return "-----------------------------\n" +
                 " Nombre: " + nombre + "\n" +
                 " Telefono: " + telefono + "\n" +
                 " Direccion: " + direccion + "\n" +
