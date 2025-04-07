@@ -21,6 +21,22 @@ public class Camara extends Producto {
         return modelo;
     }
 
+    // ToString
+
+    public String toString () {
+        return "*** Informacion del Producto *** \n " +
+                "--------------------------------" + "\n" +
+                "Nombre:  " + getNombre() + "\n" +
+                "Descripcion: " + getDescripcion() + "\n" +
+                "Categoria: " + getCategoria() + "\n" +
+                "Codigo: " + getCodigo() + "\n" +
+                "Cantidad: " + getCantidad() + "\n" +
+                "Precio: " + getPrecio() + "\n" +
+                "Marca: " + marca + "\n" +
+                "Modelo " + modelo + "\n" +
+                "--------------------------------";
+    }
+
    
 
 }
