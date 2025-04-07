@@ -21,4 +21,20 @@ public class Impresion extends Producto {
         return foto;
     }
 
+    // ToString
+
+    public String toString () {
+        return "*** Informacion del Producto *** \n " +
+                "--------------------------------" + "\n" +
+                "Nombre:  " + getNombre() + "\n" +
+                "Descripcion: " + getDescripcion() + "\n" +
+                "Categoria: " + getCategoria() + "\n" +
+                "Codigo: " + getCodigo() + "\n" +
+                "Cantidad: " + getCantidad() + "\n" +
+                "Precio: " + getPrecio() + "\n" +
+                "Color: " + color + "\n" +
+                "Foto: " + foto + "\n" +
+                "--------------------------------";
+    }
+
 }
