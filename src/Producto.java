@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Producto {
     //atributos
     private String nombre;
@@ -87,4 +89,28 @@ public class Producto {
                 "Precio: " + precio + "\n" +
                 "***************************";
     }
+
+    // metodo para aplicar un descuento
+    public void aplicarDescuento(){
+        Scanner scanner = new Scanner(System.in); // me sirve para que el usuario ingrese el porcentaje
+        System.out.println("ingresa el porcentaje que deseas otorgar");
+        double porcentaje = scanner.nextDouble(); // asigno el tipo de dato que recibe en este caso un scaner de tipo double
+
+        // agrego un condicional para controlar el dato y no ingresen datos ilogicos como negativos
+        if (porcentaje <= 0 || porcentaje > 100){
+            System.out.println("El porcentaje debe de ser de 1 al 100");
+            return;
+        }
+
+        double descuento = this.precio * (porcentaje/100);
+        this.precio -= descuento;
+
+        System.out.println("El descuento aplicado es:  " + descuento);
+        System.out.println("El nuevo precio es:  " + this.precio);
+        scanner.close();
+
+    }
+
+
+
 }
