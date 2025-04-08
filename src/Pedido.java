@@ -25,7 +25,8 @@ public class Pedido {
     // toString
 
     public String toString () {
-        return "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* \n" +
+        return  "---- Informacion de Pedido ----" +
+                "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* \n" +
                 "Cliente: " + cliente + "\n" +
                 "Producto: " + Arrays.toString(producto) + "\n" +
                 "Fecha: " + fecha + "\n" +
