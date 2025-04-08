@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Random;
 
@@ -19,6 +20,18 @@ public class Pedido {
     // uso Random para generar un numero de pedido entre 1 al 5000
     Random random = new Random();
     this.numeroPedido = 1 + random.nextInt(5000);
+    }
+
+    // toString
+
+    public String toString () {
+        return "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* \n" +
+                "Cliente: " + cliente + "\n" +
+                "Producto: " + Arrays.toString(producto) + "\n" +
+                "Fecha: " + fecha + "\n" +
+                "Numero de Pedido: " + numeroPedido + "\n" +
+                "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*";
+
     }
 
 }
