@@ -14,7 +14,5 @@ public class EjecutarTecnoPrint {
         //actualizar cliente
         baseDeDatos1[0].actualizarCliente("Jhon Canon","300 841 54 54","Cra 35 # 35 20","jhoncano@campusucc.edu.co","45955875");
         System.out.println(baseDeDatos1[0]);
-
-
     }
 }
