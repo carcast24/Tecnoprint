@@ -1,4 +1,6 @@
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Producto {
@@ -41,6 +43,11 @@ public class Producto {
     public double getPrecio () {
         return precio;
     }
+    public String formatearPrecio(double precio) {
+        NumberFormat formatoColombiano = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+        return formatoColombiano.format(precio);
+    }
+
 
     // metodo para actualizar producto
     public void actualizarProducto(String nuevoNombre, String nuevaDescripcion, String nuevaCategoria, String nuevoCodigo, int nuevaCantidad, double nuevoPrecio){
@@ -102,12 +109,13 @@ public class Producto {
             System.out.println("El porcentaje debe de ser de 1 al 100");
             return;
         }
+        // aplicamos el descuento al precio total
+        double total = getPrecio() * getCantidad(); // calculo el total
+        double descuento = total * (porcentaje / 100); // encuentro el descuento
+        this.precio = total - descuento; // y aqui lo asigno para actualizar el precio
 
-        double descuento = (this.precio * this.cantidad) * (porcentaje/100);
-        this.precio -= descuento;
-
-        System.out.println("El descuento aplicado es:  " + descuento);
-        System.out.println("El nuevo precio es:  " + this.precio);
+        System.out.println("El descuento aplicado es:  " + formatearPrecio(descuento));
+        System.out.println("El nuevo precio es:  " + formatearPrecio(this.precio));
         
 
     }
