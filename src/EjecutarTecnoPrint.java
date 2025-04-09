@@ -27,7 +27,8 @@ public class EjecutarTecnoPrint {
         Producto [] pedido1 = new Producto[1];
         pedido1[0] = camarasProducto [0];
         Date fechaActual = new Date();
-
+        //uso metodo para dar descuento
+        pedido1[0].aplicarDescuento();
 
 
         // se genera el primer pedido
