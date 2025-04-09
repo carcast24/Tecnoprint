@@ -43,7 +43,7 @@ public class Camara extends Producto {
         String precioTotalStr;
 
         if (totalConDescuento != -1) {
-            precioTotalStr = "Precio total con descuento: " + formatearPrecio(totalConDescuento);
+            precioTotalStr = "Pago total con descuento: " + formatearPrecio(totalConDescuento);
         } else {
             precioTotalStr = "Precio total: " + formatearPrecio(getPrecio() * getCantidad());
         }
@@ -57,7 +57,7 @@ public class Camara extends Producto {
                 "Precio unitario: " + formatearPrecio(getPrecio()) + "\n" +
                 "Cantidad: " + getCantidad() + "\n" +
                 "Precio total: " + formatearPrecio(getPrecioTotal()) + "\n" +
-                "Total a pagar: " + precioTotalStr + "\n" +
+                 precioTotalStr + "\n" +
                 "Marca: " + marca + "\n" +
                 "Modelo " + modelo + "\n" +
                 "--------------------------------";
