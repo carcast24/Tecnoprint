@@ -26,15 +26,28 @@ public class Camara extends Producto {
     public double getPrecioTotal (){
         return getCantidad() * getPrecio();
     }
+
     // poner formato al precio
     public String formatearPrecio(double precio) {
         NumberFormat formatoColombiano = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
         return formatoColombiano.format(precio);
     }
 
+
     // ToString
 
     public String toString () {
+
+        // condicional para mostrar el descuento si se ha hecho
+
+        String precioTotalStr;
+
+        if (totalConDescuento != -1) {
+            precioTotalStr = "Precio total con descuento: " + formatearPrecio(totalConDescuento);
+        } else {
+            precioTotalStr = "Precio total: " + formatearPrecio(getPrecio() * getCantidad());
+        }
+
         return "*** Informacion del Producto *** \n " +
                 "--------------------------------" + "\n" +
                 "Nombre:  " + getNombre() + "\n" +
@@ -44,6 +57,7 @@ public class Camara extends Producto {
                 "Precio unitario: " + formatearPrecio(getPrecio()) + "\n" +
                 "Cantidad: " + getCantidad() + "\n" +
                 "Precio total: " + formatearPrecio(getPrecioTotal()) + "\n" +
+                "Total a pagar: " + precioTotalStr + "\n" +
                 "Marca: " + marca + "\n" +
                 "Modelo " + modelo + "\n" +
                 "--------------------------------";
