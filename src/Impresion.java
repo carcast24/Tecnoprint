@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Impresion extends Producto {
     // atributos 
     private String color;
@@ -5,10 +7,13 @@ public class Impresion extends Producto {
 
     // constructor
 
-    public Impresion(String nombre, String descripcion, String categoria, String codigo, int cantidad, double precio, String color, Foto [] foto){
+    public Impresion(String nombre, String descripcion, String categoria, String codigo, int cantidad, double precio, String color){
         super(nombre,descripcion,categoria,codigo,cantidad,precio); // herencia de superclase Producto
         this.color = color;
-        this.foto = foto;
+        this.foto = new Foto[2];
+        foto[0] = new Foto("200ppp","foto_carnet.jpg");
+        foto[1] = new Foto("200ppp","foto_retrato.jpg");
+
     }
 
     // getter
@@ -33,7 +38,7 @@ public class Impresion extends Producto {
                 "Cantidad: " + getCantidad() + "\n" +
                 "Precio: " + getPrecio() + "\n" +
                 "Color: " + color + "\n" +
-                "Foto: " + foto + "\n" +
+                "Foto: " + Arrays.toString(foto) + "\n" +
                 "--------------------------------";
     }
 
