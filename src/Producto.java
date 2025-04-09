@@ -11,6 +11,8 @@ public class Producto {
     private String codigo;
     private int cantidad;
     private double precio;
+    protected double totalConDescuento =-1; // uso el protected para que este atributo sea visible para las subclases
+
 
     // constructor
 
@@ -112,10 +114,14 @@ public class Producto {
         // aplicamos el descuento al precio total
         double total = getPrecio() * getCantidad(); // calculo el total
         double descuento = total * (porcentaje / 100); // encuentro el descuento
-        this.precio = total - descuento; // y aqui lo asigno para actualizar el precio
+        double totalConDescuento = total - descuento; // y aqui lo asigno para actualizar el precio
 
+        // guardo el total del descuento en el atributo protected
+        this.totalConDescuento = totalConDescuento;
+
+        System.out.println("El precio total es_ " + formatearPrecio(total));
         System.out.println("El descuento aplicado es:  " + formatearPrecio(descuento));
-        System.out.println("El nuevo precio es:  " + formatearPrecio(this.precio));
+        System.out.println("El nuevo precio es:  " + formatearPrecio(totalConDescuento));
         
 
     }
