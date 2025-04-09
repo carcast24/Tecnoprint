@@ -80,7 +80,7 @@ public class Producto {
     // metodo to string
 
     public String toString(){
-        return "*************************** \n" +
+        return   " " +
                 "Informacion del producto \n" +
                 "Nombre: " + nombre + "\n" +
                 "Descripcion: " + descripcion + "\n" +

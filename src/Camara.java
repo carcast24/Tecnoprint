@@ -20,6 +20,9 @@ public class Camara extends Producto {
     public String getModelo () {
         return modelo;
     }
+    public double getPrecioTotal (){
+        return getCantidad() * getPrecio();
+    }
 
     // ToString
 
@@ -30,8 +33,9 @@ public class Camara extends Producto {
                 "Descripcion: " + getDescripcion() + "\n" +
                 "Categoria: " + getCategoria() + "\n" +
                 "Codigo: " + getCodigo() + "\n" +
+                "Precio unitario: " + getPrecio() + "\n" +
                 "Cantidad: " + getCantidad() + "\n" +
-                "Precio: " + getPrecio() + "\n" +
+                "Precio total: " + getPrecioTotal() + "\n" +
                 "Marca: " + marca + "\n" +
                 "Modelo " + modelo + "\n" +
                 "--------------------------------";
