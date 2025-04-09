@@ -1,3 +1,6 @@
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Camara extends Producto {
     // atributos de clase 
     private String marca;
@@ -23,6 +26,11 @@ public class Camara extends Producto {
     public double getPrecioTotal (){
         return getCantidad() * getPrecio();
     }
+    // poner formato al precio
+    public String formatearPrecio(double precio) {
+        NumberFormat formatoColombiano = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+        return formatoColombiano.format(precio);
+    }
 
     // ToString
 
@@ -33,9 +41,9 @@ public class Camara extends Producto {
                 "Descripcion: " + getDescripcion() + "\n" +
                 "Categoria: " + getCategoria() + "\n" +
                 "Codigo: " + getCodigo() + "\n" +
-                "Precio unitario: " + getPrecio() + "\n" +
+                "Precio unitario: " + formatearPrecio(getPrecio()) + "\n" +
                 "Cantidad: " + getCantidad() + "\n" +
-                "Precio total: " + getPrecioTotal() + "\n" +
+                "Precio total: " + formatearPrecio(getPrecioTotal()) + "\n" +
                 "Marca: " + marca + "\n" +
                 "Modelo " + modelo + "\n" +
                 "--------------------------------";

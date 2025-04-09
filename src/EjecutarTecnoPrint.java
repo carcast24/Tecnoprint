@@ -29,6 +29,7 @@ public class EjecutarTecnoPrint {
         Date fechaActual = new Date();
 
 
+
         // se genera el primer pedido
 
         Pedido ordenVenta = new Pedido(baseDeDatos1[0],pedido1,fechaActual,5251545);
