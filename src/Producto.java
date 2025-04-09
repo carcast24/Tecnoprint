@@ -103,7 +103,7 @@ public class Producto {
             return;
         }
 
-        double descuento = this.precio * (porcentaje/100);
+        double descuento = (this.precio * this.cantidad) * (porcentaje/100);
         this.precio -= descuento;
 
         System.out.println("El descuento aplicado es:  " + descuento);
