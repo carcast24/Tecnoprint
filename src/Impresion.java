@@ -36,7 +36,7 @@ public class Impresion extends Producto {
                 "Categoria: " + getCategoria() + "\n" +
                 "Codigo: " + getCodigo() + "\n" +
                 "Cantidad: " + getCantidad() + "\n" +
-                "Precio: " + getPrecio() + "\n" +
+                "Precio: " + getPrecio() * getCantidad() + "\n" +
                 "Color: " + color + "\n" +
                 "Foto: " + Arrays.toString(foto) + "\n" +
                 "--------------------------------";

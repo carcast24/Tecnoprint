@@ -22,6 +22,10 @@ public class EjecutarTecnoPrint {
         camarasProducto [0]= new Camara("Eos Rebel","Cámara SLR ideal para principiantes, \ncon sensor CMOS, procesador DIGIC 4, pantalla LCD, \nISO ampliado y funciones creativas","Digital","001",5,1900000.36,"Canon","EOS Rebel T5");
         camarasProducto [1] = new Camara("Sony Alpha","La Cámara 4K HDR Sony Vlog de Lentes Intercambiables - ZV-E10L \nestá diseñada para vlogueros creativos que buscan lograr una apariencia artística. \nLa ZV-E10 se encarga de los aspectos técnicos de la producción de video.","Digital","002",5,3397123.35,"Sony","Kit ZV-E10 f/3.5-5.6 OSS ILCZVE10L");
 
+        //hacemos una impresion
+        Impresion impresion1 = new Impresion("Familia","impresion de foto a color","impresion","FT",1,500.0,"color");
+
+
         // arreglo de producto
 
         Producto [] pedido1 = new Producto[1];
@@ -30,12 +34,21 @@ public class EjecutarTecnoPrint {
         //uso metodo para dar descuento
         pedido1[0].aplicarDescuento();
 
+        // se crea arreglo de servicion
+
+        Producto[] productoSer = new Producto[1];
+        productoSer[0] = impresion1;
+
 
         // se genera el primer pedido
 
         Pedido ordenVenta = new Pedido(baseDeDatos1[0],pedido1,fechaActual,5251545);
         System.out.println(ordenVenta);
 
+        // se genera el pedido de impresion
+        System.out.println("servicio de impresion");
+        Pedido ordenVentaS = new Pedido(baseDeDatos1[1],productoSer,fechaActual,656558);
+        System.out.println(ordenVentaS);
 
 
 
