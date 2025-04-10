@@ -42,7 +42,7 @@ public class EjecutarTecnoPrint {
 
         // se genera el primer pedido
 
-        Pedido ordenVenta = new Pedido(baseDeDatos1[0],pedido1,fechaActual,5251545);
+        Pedido ordenVenta = new Pedido(baseDeDatos1[0],pedido1,fechaActual,525154505);
         System.out.println(ordenVenta);
 
         // se genera el pedido de impresion
