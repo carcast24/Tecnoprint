@@ -7,12 +7,10 @@ public class Impresion extends Producto {
 
     // constructor
 
-    public Impresion(String nombre, String descripcion, String categoria, String codigo, int cantidad, double precio, String color){
+    public Impresion(String nombre, String descripcion, String categoria, String codigo, int cantidad, double precio, String color,Foto[] foto){
         super(nombre,descripcion,categoria,codigo,cantidad,precio); // herencia de superclase Producto
         this.color = color;
-        this.foto = new Foto[2];
-        foto[0] = new Foto("200ppp","foto_carnet.jpg");
-        foto[1] = new Foto("200ppp","foto_retrato.jpg");
+        this.foto = foto;
 
     }
 
