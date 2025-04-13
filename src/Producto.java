@@ -50,6 +50,9 @@ public class Producto {
         return formatoColombiano.format(precio);
     }
 
+    public double getTotalConDescuento() {
+        return totalConDescuento;
+    }
 
     // metodo para actualizar producto
     public void actualizarProducto(String nuevoNombre, String nuevaDescripcion, String nuevaCategoria, String nuevoCodigo, int nuevaCantidad, double nuevoPrecio){
@@ -96,7 +99,7 @@ public class Producto {
                 "Categoria: " + categoria + "\n" +
                 "Codigo: " + codigo + "\n" +
                 "Cantidad: " + cantidad + "\n" +
-                "Precio: " + precio + "\n" +
+                "Precio: " + formatearPrecio(precio) + "\n" +
                 "***************************";
     }
 
